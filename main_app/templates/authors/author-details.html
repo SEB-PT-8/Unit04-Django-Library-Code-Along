@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}{% endblock head %}
+
+
+{% block content %}
+
+<h1>Author Detailts</h1>
+
+    <p>Name:{{author.first_name}} {{author.last_name}}</p>
+
+    <a href="/authors/delete/{{author.id}}">Delete Author</a>
+    <a href="/authors/{{author.id}}/update/">Update Author</a>
+{% endblock content %}

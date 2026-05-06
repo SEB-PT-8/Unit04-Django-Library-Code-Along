@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}{% endblock head %}
+
+
+{% block content %}
+
+{% if form.instance.id %}
+<h1>Update Author</h1>
+{% else %}
+<h1>Author Create</h1>
+
+{% endif %}
+<form method='post'>
+    {% csrf_token %}
+    {{form}}
+
+
+    {% if form.instance.id %}
+    <button>Update Author</button>
+    {% else %}
+        <button>Create Author</button>
+
+    {% endif %}
+</form>
+
+{% endblock content %}
+
+
