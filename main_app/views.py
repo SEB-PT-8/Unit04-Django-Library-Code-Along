@@ -8,7 +8,10 @@ from django.shortcuts import render
 
 # first parameter in all views is request
 def homepage(request):
-    return render(request,'homepage.html')
+    one_fruit = {
+        'name':'Apple'
+    }
+    return render(request,'homepage.html', {'fruit':one_fruit})
 
 
 def about(request):
